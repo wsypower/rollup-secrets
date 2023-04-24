@@ -1,2 +1,6 @@
-const a = 1
-console.log(a)
+import('./test').then((res) => {
+  const a = res()
+  console.log(a)
+})
+
+export default a
