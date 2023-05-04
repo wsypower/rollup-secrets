@@ -2,24 +2,24 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-04-20 22:20:59
- * @LastEditTime: 2023-04-24 22:14:57
+ * @LastEditTime: 2023-05-04 13:15:21
  * @LastEditors: wsy
  */
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
+import MyPlugins from './plugins/my-plugin.js'
 
 export default {
   input: {
     a: 'src/index.js',
   },
   output: {
-    dir: 'dist',
-    entryFileNames: 'js/[name].js',
-    chunkFileNames: 'asset/[name].js',
-    format: 'esm',
+    dir: 'dist1',
   },
   plugins: [
-    nodeResolve(),
-    commonjs(),
+    MyPlugins({
+      name: 'my-plugin',
+    }),
+    // nodeResolve(),
+    // commonjs(),
+    // progressBar(),
   ],
 }

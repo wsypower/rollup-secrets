@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-04-24 20:53:42
- * @LastEditTime: 2023-04-24 21:07:09
+ * @LastEditTime: 2023-05-04 12:59:41
  * @LastEditors: wsy
  */
 import { rollup } from 'rollup'
@@ -13,7 +13,6 @@ async function build() {
     const bundle = await rollup(config.input)
     const { output } = await bundle.generate(config.output)
     await bundle.write(config.output)
-    console.log(output)
     await bundle.close()
   }
   catch (error) {

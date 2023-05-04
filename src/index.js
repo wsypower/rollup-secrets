@@ -1,6 +1,4 @@
-import('./test').then((res) => {
-  const a = res()
-  console.log(a)
-})
+import test from './test.js'
 
-export default a
+const a = 1
+console.log(test())
