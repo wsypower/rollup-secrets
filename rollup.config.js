@@ -5,7 +5,8 @@
  * @LastEditTime: 2023-05-04 13:15:21
  * @LastEditors: wsy
  */
-import MyPlugins from './plugins/my-plugin.js'
+// import MyPlugins from './plugins/my-plugin.js'
+import virtualModule from './plugins/virtual-module.js'
 
 export default {
   input: {
@@ -15,9 +16,10 @@ export default {
     dir: 'dist1',
   },
   plugins: [
-    MyPlugins({
-      name: 'my-plugin',
-    }),
+    // MyPlugins({
+    //   name: 'my-plugin',
+    // }),
+    virtualModule(),
     // nodeResolve(),
     // commonjs(),
     // progressBar(),
